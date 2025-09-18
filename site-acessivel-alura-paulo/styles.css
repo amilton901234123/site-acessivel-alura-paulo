@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lemon&display=swap');
+
+:root {
+    --fundo-dark: #0a0a0f;
+    --roxo-neon: #9b59b6;
+    --azul-neon: #3498db;
+    --texto-claro: #f1f1f1;
+    --cinza: #bbbbbb;
+}
+
+/* Fundo estrelado animado */
+body {
+    font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
+    background: var(--fundo-dark);
+    color: var(--texto-claro);
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+header {
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+
+section {
+    padding-bottom: 5rem;
+}
+
+/* Navbar */
+.nav-link {
+    color: var(--azul-neon);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--roxo-neon);
+    text-shadow: 0 0 10px var(--roxo-neon);
+}
+
+/* Hero */
+.inicio-fundo {
+    background: radial-gradient(circle at top, #1c1c29, #0a0a0f);
+    border-radius: 40px;
+    width: 100%;
+    height: 606px;
+    padding: 40px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(155, 89, 182, 0.5);
+}
+
+.img-inicio {
+    position: absolute;
+    right: 0;
+    top: 18rem;
+    width: 40rem;
+    height: auto;
+    opacity: 0.8;
+}
+
+.esquerda-conteudo h1 {
+    color: var(--texto-claro);
+    text-shadow: 0 0 20px var(--roxo-neon);
+}
+
+.botao-inicio {
+    background: linear-gradient(90deg, var(--roxo-neon), var(--azul-neon));
+    border-radius: 30px;
+    border: none;
+    width: 14em;
+    height: 3em;
+    color: #fff;
+    font-weight: bold;
+    box-shadow: 0 0 15px var(--roxo-neon);
+    transition: 0.3s;
+
+    
+    display: block;          
+    margin: 20px auto 0;     
+    position: relative;
+    z-index: 10;             
+}
+
+.botao-inicio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--azul-neon);
+}
+
+/* Seção tropicalia */
+#tropicalia {
+    padding-top: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.05);
+}
+
+h2 {
+    font-family: 'Lemon', serif;
+    font-size: 2.5em;
+    font-style: normal;
+    color: var(--roxo-neon);
+    text-shadow: 0 0 15px var(--roxo-neon);
+}
+
+/* Galeria */
+#galeria {
+    background: transparent;
+}
+
+.fundo-galeria img {
+    border: 3px solid var(--azul-neon);
+    box-shadow: 0 0 15px var(--azul-neon);
+}
+
+/* Contato */
+#contato {
+    background: rgba(255, 255, 255, 0.02);
+    padding: 4rem 0;
+    border-radius: 20px;
+    box-shadow: inset 0 0 20px rgba(255,255,255,0.05);
+}
+
+.formulario {
+    background-color: #111;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(155, 89, 182, 0.3);
+    font-weight: bold;
+    color: var(--texto-claro);
+}
+
+.formulario button {
+    background: linear-gradient(90deg, var(--roxo-neon), var(--azul-neon));
+    border: none;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 15px var(--roxo-neon);
+    transition: 0.3s;
+}
+
+.formulario button:hover {
+    box-shadow: 0 0 25px var(--azul-neon);
+}
+
+.form-control {
+    background-color: #1a1a1a;
+    border: 1px solid var(--cinza);
+    color: var(--texto-claro);
+}
+
+/* Acessibilidade */
+.menu-acessibilidade {
+    position: fixed;
+    top: 2rem;
+    right: 20px;
+    z-index: 1000;
+}
+
+.rotacao-botao {
+    transform: rotate(-90deg);
+    transform-origin: right center;
+    background: linear-gradient(90deg, var(--roxo-neon), var(--azul-neon));
+    border: none;
+    color: #fff;
+    box-shadow: 0 0 15px var(--azul-neon);
+}
+
+.opcoes-acessibilidade {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.opcoes-acessibilidade button {
+    margin-bottom: 5px;
+    background: #1a1a1a;
+    border: 1px solid var(--roxo-neon);
+    color: #fff;
+    transition: 0.3s;
+}
+
+.opcoes-acessibilidade button:hover {
+    background: var(--roxo-neon);
+}
+
+/* Footer */
+footer {
+    background: #111;
+    color: var(--cinza);
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+footer i {
+    color: var(--azul-neon);
+    font-size: 1.5rem;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+footer i:hover {
+    color: var(--roxo-neon);
+    text-shadow: 0 0 10px var(--roxo-neon);
+}
